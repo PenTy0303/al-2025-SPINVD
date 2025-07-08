@@ -15,7 +15,6 @@ choices = [
     ("プレイヤーの弾グループ", "pygame.sprite.Group()"),
     ("敵の弾グループ", "pygame.sprite.Group()"),
     ("FPS", "60"),
-    ("敵の弾の色", "color"),
     ("プレイヤーに当たったか調べる", "pygame.sprite.spritecollideany(player, enemy_bullets)"),
     ("プレイヤーの見た目の形", "pygame.Surface((50,20))"),
     ("敵の間隔", "80"),
