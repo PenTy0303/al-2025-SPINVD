@@ -15,7 +15,7 @@ choices = [
     ("プレイヤーの弾グループ", "pygame.sprite.Group()"),
     ("敵の弾グループ", "pygame.sprite.Group()"),
     ("FPS", "60"),
-    ("弾の色", "color"),
+    ("敵の弾の色", "color"),
     ("プレイヤーに当たったか調べる", "pygame.sprite.spritecollideany(player, enemy_bullets)"),
     ("プレイヤーの見た目の形", "pygame.Surface((50,20))"),
     ("敵の間隔", "80"),
@@ -23,10 +23,12 @@ choices = [
     ("30%の確率で弾を撃つ", "random.random() < 0.3"),
     ("プレイヤーのグループを作る", "pygame.sprite.Group(player)"),
     ("敵が下に下がる量", "20"),
-    ("ゲームのメッセージ条件式", '"SUGEE" if not enemies else "OSHIMAI"'),
+    ("ゲームのメッセージ条件式", ""SUGEE" if not enemies else "OSHIMAI""),
     ("弾が画面外に出たかどうかの条件", "self.rect.bottom < 0 or self.rect.top > HEIGHT"),
     ("背景色", "(0, 0, 0)"),
     ("ゲームを始める", "pygame.init()"),
     ("敵の横スピード", "2"),
     ("敵のy座標", "100"),
+    ("プレイヤーの色", "GREEN"),
+    ("プレイヤーのスピード", "6")
 ]
