@@ -9,6 +9,7 @@ pygame.display.set_caption("Simple shooting")
 clock = pygame.time.Clock()
 font = pygame.font.SysFont("Arial", 36)
 
+
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 YELLOW = (255, 255, 0)
