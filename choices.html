@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>コード選択肢集</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .item {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .code {
+      font-family: monospace;
+      white-space: pre-wrap;
+      margin-right: 10px;
+      flex-grow: 1;
+    }
+    button {
+      padding: 5px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>機能別・コード選択肢</h1>
+
+<script>
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert("コピーしました:\n" + text);
+    });
+  }
+</script>
+
+<!-- 初期化 -->
+<h2>初期化</h2>
+<div class="item"><div class="code">pygame.display.set_caption('Simple shooting')</div><button onclick="copyToClipboard(`pygame.display.set_caption('Simple shooting')`)">コピー</button></div>
+<div class="item"><div class="code">pygame.display.set_mode((WIDTH, HEIGHT))</div><button onclick="copyToClipboard(`pygame.display.set_mode((WIDTH, HEIGHT))`)">コピー</button></div>
+<div class="item"><div class="code">pygame.init()</div><button onclick="copyToClipboard(`pygame.init()`)">コピー</button></div>
+
+<!-- プレイヤー -->
+<h2>プレイヤー</h2>
+<div class="item"><div class="code">pygame.Surface((50,20))</div><button onclick="copyToClipboard(`pygame.Surface((50,20))`)">コピー</button></div>
+<div class="item"><div class="code">GREEN</div><button onclick="copyToClipboard(`GREEN`)">コピー</button></div>
+<div class="item"><div class="code">6</div><button onclick="copyToClipboard(`6`)">コピー</button></div>
+<div class="item"><div class="code">pygame.sprite.Group(player)</div><button onclick="copyToClipboard(`pygame.sprite.Group(player)`)">コピー</button></div>
+
+<!-- 弾 -->
+<h2>弾</h2>
+<div class="item"><div class="code">pygame.Surface((5, 10))</div><button onclick="copyToClipboard(`pygame.Surface((5, 10))`)">コピー</button></div>
+<div class="item"><div class="code">color</div><button onclick="copyToClipboard(`color`)">コピー</button></div>
+<div class="item"><div class="code">Bullet(player.rect.centerx, player.rect.top, -10, YELLOW)</div><button onclick="copyToClipboard(`Bullet(player.rect.centerx, player.rect.top, -10, YELLOW)`)">コピー</button></div>
+<div class="item"><div class="code">Bullet(enemy.rect.centerx, enemy.rect.bottom, 7, BLUE)</div><button onclick="copyToClipboard(`Bullet(enemy.rect.centerx, enemy.rect.bottom, 7, BLUE)`)">コピー</button></div>
+<div class="item"><div class="code">self.rect.bottom < 0 or self.rect.top > HEIGHT</div><button onclick="copyToClipboard(`self.rect.bottom < 0 or self.rect.top > HEIGHT`)">コピー</button></div>
+
+<!-- 敵 -->
+<h2>敵</h2>
+<div class="item"><div class="code">pygame.Surface((40, 30))</div><button onclick="copyToClipboard(`pygame.Surface((40, 30))`)">コピー</button></div>
+<div class="item"><div class="code">RED</div><button onclick="copyToClipboard(`RED`)">コピー</button></div>
+<div class="item"><div class="code">2</div><button onclick="copyToClipboard(`2`)">コピー</button></div>
+<div class="item"><div class="code">1</div><button onclick="copyToClipboard(`1`)">コピー</button></div>
+<div class="item"><div class="code">20</div><button onclick="copyToClipboard(`20`)">コピー</button></div>
+<div class="item"><div class="code">80</div><button onclick="copyToClipboard(`80`)">コピー</button></div>
+<div class="item"><div class="code">8</div><button onclick="copyToClipboard(`8`)">コピー</button></div>
+<div class="item"><div class="code">100</div><button onclick="copyToClipboard(`100`)">コピー</button></div>
+<div class="item"><div class="code">random.random() < 0.3</div><button onclick="copyToClipboard(`random.random() < 0.3`)">コピー</button></div>
+
+<!-- グループ・判定 -->
+<h2>グループ・当たり判定</h2>
+<div class="item"><div class="code">pygame.sprite.Group()</div><button onclick="copyToClipboard(`pygame.sprite.Group()`)">コピー</button></div>
+<div class="item"><div class="code">pygame.sprite.Group()</div><button onclick="copyToClipboard(`pygame.sprite.Group()`)">コピー</button></div>
+<div class="item"><div class="code">pygame.sprite.Group()</div><button onclick="copyToClipboard(`pygame.sprite.Group()`)">コピー</button></div>
+<div class="item"><div class="code">pygame.sprite.groupcollide(bullets, enemies, True, True)</div><button onclick="copyToClipboard(`pygame.sprite.groupcollide(bullets, enemies, True, True)`)">コピー</button></div>
+<div class="item"><div class="code">pygame.sprite.spritecollideany(player, enemy_bullets)</div><button onclick="copyToClipboard(`pygame.sprite.spritecollideany(player, enemy_bullets)`)">コピー</button></div>
+
+<!-- その他 -->
+<h2>その他</h2>
+<div class="item"><div class="code">(0, 0, 0)</div><button onclick="copyToClipboard(`(0, 0, 0)`)">コピー</button></div>
+<div class="item"><div class="code">60</div><button onclick="copyToClipboard(`60`)">コピー</button></div>
+<div class="item"><div class="code">"SUGEE" if not enemies else "OSHIMAI"</div><button onclick="copyToClipboard(`"SUGEE" if not enemies else "OSHIMAI"`)">コピー</button></div>
+</body>
+</html>
