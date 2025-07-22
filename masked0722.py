@@ -56,7 +56,7 @@ class Enemy(pygame.sprite.Sprite):
         "___(敵が横に移動)___"
         if self.rect.right >= WIDTH or self.rect.left <= 0:
             self.direction *= -1
-            self.rect.y += "___(敵が方向転換時に下がる量)___"
+            "___(敵が方向転換時に下がる量)___"
         self.shoot_timer += 1
 
     def can_shoot(self):
