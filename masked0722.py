@@ -60,7 +60,7 @@ class Enemy(pygame.sprite.Sprite):
         self.shoot_timer += 1
 
     def can_shoot(self):
-        if self.shoot_timer > "___(弾を撃つ間隔条件)___":
+        if "___(弾を撃つ間隔条件)___":
             self.shoot_timer = 0
             return "___(30%の確率でTrue)___"
         return False
@@ -78,7 +78,7 @@ for i in range(8):
 game_over = False
 
 while True:
-    screen.fill("___(背景色設定)___")
+    "___(背景色設定)___"
     keys = pygame.key.get_pressed()
 
     for event in pygame.event.get():
@@ -87,7 +87,7 @@ while True:
             pygame.quit()
             sys.exit()
         if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and not game_over:
-            bullet = "___(プレイヤーの弾を生成)___"
+            "___(プレイヤーの弾を生成)___"
             bullets.add(bullet)
 
     if not game_over:
@@ -98,7 +98,7 @@ while True:
 
         for enemy in enemies:
             if enemy.can_shoot():
-                enemy_bullet = "___(敵の弾を生成)___"
+                "___(敵の弾を生成)___"
                 enemy_bullets.add(enemy_bullet)
 
         hits = "___(敵に弾が当たったか判定)___"
