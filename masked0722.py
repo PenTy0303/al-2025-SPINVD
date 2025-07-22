@@ -32,7 +32,7 @@ class Player(pygame.sprite.Sprite):
 class Bullet(pygame.sprite.Sprite):
     def __init__(self, x, y, speed, color):
         super().__init__()
-        self.image = "___(弾の画像を作成)___"
+        self.image = "___(弾の形を作成)___"
         self.image.fill("___(弾の色を設定)___")
         self.rect = self.image.get_rect(center=(x, y))
         self.speed = speed
@@ -45,7 +45,7 @@ class Bullet(pygame.sprite.Sprite):
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
-        self.image = "___(敵の画像を作成)___"
+        self.image = "___(敵の形を作成)___"
         self.image.fill("___(敵の色を設定)___")
         self.rect = self.image.get_rect(topleft=(x, y))
         self.shoot_timer = 0
