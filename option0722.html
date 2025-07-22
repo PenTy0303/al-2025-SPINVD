@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>コード選択肢コピー</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f9f9f9; }
+    h2 { color: #333; }
+    .code-block {
+      background: #eee;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      position: relative;
+    }
+    .copy-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 4px 8px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    code { white-space: pre; }
+  </style>
+</head>
+<body>
+
+<h2>プレイヤー関連（Player）</h2>
+<div class="code-block"><button class="copy-button">コピー</button><code>pygame.Surface((50,20))</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.image.fill(GREEN)</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.speed = 6</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.rect.x -= self.speed</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.rect.x += self.speed</code></div>
+
+<h2>敵関連（Enemy）</h2>
+<div class="code-block"><button class="copy-button">コピー</button><code>pygame.Surface((40, 30))</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.image.fill(RED)</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.speed_x = 2</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.direction = 1</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.rect.x += self.speed_x * self.direction</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.rect.right >= WIDTH or self.rect.left <= 0</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.direction *= -1</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.rect.y += 20</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.shoot_timer > 60</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>random.random() < 0.3</code></div>
+
+<h2>弾関連（Bullet / 弾発射）</h2>
+<div class="code-block"><button class="copy-button">コピー</button><code>pygame.Surface((5, 10))</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.image.fill(color)</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>self.rect.bottom &lt; 0 or self.rect.top &gt; HEIGHT</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>bullet = Bullet(player.rect.centerx, player.rect.top, -10, YELLOW)</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>enemy_bullet = Bullet(enemy.rect.centerx, enemy.rect.bottom, 7, BLUE)</code></div>
+
+<h2>当たり判定・勝敗処理</h2>
+<div class="code-block"><button class="copy-button">コピー</button><code>pygame.sprite.groupcollide(bullets, enemies, True, True)</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>pygame.sprite.spritecollideany(player, enemy_bullets)</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>"SUGEE" if not enemies else "OSHIMAI"</code></div>
+
+<h2>共通 / 初期化・描画</h2>
+<div class="code-block"><button class="copy-button">コピー</button><code>pygame.init()</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>pygame.display.set_mode((WIDTH, HEIGHT))</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>pygame.display.set_caption("Simple shooting")</code></div>
+<div class="code-block"><button class="copy-button">コピー</button><code>screen.fill((0, 0, 0))</code></div>
+
+<script>
+  const buttons = document.querySelectorAll('.copy-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const code = btn.nextElementSibling.innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = 'コピー済み!';
+        setTimeout(() => btn.textContent = 'コピー', 1000);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
